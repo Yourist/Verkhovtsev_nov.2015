@@ -1,0 +1,251 @@
+
+*{
+	font-family: "fira_sansbook","PT Sans", "Arial", sans-serif;
+	text-decoration:none;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+
+
+/*Полезная вставка куска CSS*/
+.row:before, .row:after  { /* псевдоэлементы, добавляющие стили до и после элемента в контексте */
+  content: "";
+  display: table;
+}
+
+.row:after {
+  clear: both; /* Отмена обтекания элемента справа и слева. Свойство позволяющее управлять обтеканием */
+}
+
+
+.col {
+  float: left; /* Прижимает к левому краю */
+  -webkit-box-sizing: border-box; /* Штука позволяет сохранить размеры блока */
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+} 
+
+
+
+
+html {
+  min-height: 100%; /* Минимальная высота. Нужно для резиновой верстки. */
+  position: relative; /* Устанавливает позиционирование элемента относительн оего первоначального места. Позволяет изменять положение. */
+}
+
+body {
+  height: 100%;
+  background: url("images/backgroung.png"); /* Ставим изображение на фон */
+  
+}
+
+
+/* Начало работы с заголовком*/
+.main_header {
+  background-color: #eff3f7;
+  margin-bottom: 39px; /* величина отступа header от main */
+  min-width: 960px;
+}
+
+.logo {
+  float: left;
+  margin-top: 40px; /* Отступ от верхнего края */
+  margin-bottom: 35px;
+}
+
+.social {
+  float: right; /* Прижимаем к правой части, соответственно и устанавливаем отступы */
+  margin-top: 37px;
+  margin-bottom: 37px;
+
+}
+
+.social_btn {
+  position: relative;
+  display: inline-block; /* Создаем блочный элемент */
+  vertical-align: top;
+  width: 47px;
+  height: 47px;
+  text-decoration: none;
+  margin-right: 20px;
+}
+.social ul{
+  list-style: none;
+  display: inline-block;
+}
+
+.social ul li{
+	  display: inline-block;
+}
+
+.vk{
+	background-image: url(images/vk.png);
+}
+
+.vk:hover{
+	background-image: url(images/vk-hover.png);
+}
+
+.fb{
+	background-image: url(images/fb.png);
+}
+
+.fb:hover{
+    background-image: url(images/fb-hover.png);
+}
+
+.tw{
+	background-image: url(images/tw.png);
+}
+
+.tw:hover{
+    background-image: url(images/tw-hover.png);
+}
+
+.gh{
+	background-image: url(images/gh.png);
+}
+
+.gh:hover{
+    background-image: url(images/gh-hover.png);
+}
+
+.main {
+  padding-bottom: 106px; /* Установили значение нижнего поля элемента */
+}
+
+
+
+.main ul {
+  list-style: none;
+}
+
+.sidebar {
+  float: left;
+  font-size: 21px;
+  line-height: 26px; /* межстрочный интервал */
+  background-color: #eff3f7;
+  border-radius: 3px; /* радиус скругления углов рамки */
+}
+
+.sidebar li {
+  width: 250px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 23px 27px; /* Отступы внутри элемента сверху и снизу */
+  color: #9ca1ae;
+  
+
+}
+
+#position{
+     border-bottom: 2px solid #3ba8c0;   
+}
+
+.sidebar a:hover {
+  color: #3ba8c0;
+}
+
+.sidebar .active a{
+  background-color: #3ba8c0;
+  color: #fff;
+  border-bottom: 2px solid #3ba8c0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  /* Изменяем стили активного элемента */
+  
+}
+
+.main_content {
+  width: 650px;
+  float: right;
+}
+
+.main_content_block {
+  background-color: #eff3f7;
+  border-radius: 3px;
+  padding-bottom: 23px;
+  margin-bottom: 26px;
+}
+
+.main_content_block .author {
+  line-height: 21px;
+}
+
+.main_content_block .main_content_block_header {
+  font-size: 27px;
+  padding: 13px 21px 20px;
+  font-weight: normal;
+  letter-spacing: -1.5px; /* Определяем интервал между символами в пределах элемента */
+  color: #3ba8c0;
+  border-bottom: 2px solid #3ba8c0; /* Определяем стили внизу элемента */
+  width: 167px;
+  margin-bottom: 22px;
+}
+
+.main_content_block_text {
+  padding-left: 124px;
+  padding-right: 60px;
+  padding-bottom: 18px;
+  position: relative;
+}
+
+.main_content_block_text .date {
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.main_content_block_text :before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 36px;
+  height: 34px;
+  left: 58px;
+  top: 5px;
+
+}
+
+.work :before{
+  background-image: url(images/work.png);
+}
+
+
+.education :before {
+  width: 41px;
+  height: 23px;
+  background-image: url(images/studen-header.png);
+}
+
+.course :before {
+  width: 26px;
+  height: 32px;
+  left: 61px;
+background-image: url(images/doc.png);
+}
+
+
+.main_footer {
+  font-size: 13px;
+  text-align: center;
+  color: #4a545d;
+  background-color: #eff3f7;
+  position: absolute;
+  width: 100%;
+  padding: 39px 0;
+  bottom: 0;
+  min-width: 960px;
+}
+
+
+
+
+ /*Понимаю, что тут нужно вязать к выплнению условия входа, но пусть будет */
